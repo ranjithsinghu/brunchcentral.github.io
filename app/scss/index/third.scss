@@ -1,0 +1,224 @@
+.third_container {
+  @extend .full-body;
+  float: left;
+  background-color: #F2F2F2;
+  padding: 5% 0;
+
+  .owl-carousel .owl-nav.disabled {
+    display: block !important;
+  }
+
+  .owl-carousel .owl-nav {
+    margin: 10px 0 0;
+    position: absolute;
+    top: 40%;
+    @extend .full-body;
+  }
+  @include mob-c {
+    .owl-carousel .owl-nav {
+      display: block;
+    }
+  }
+
+  .owl-carousel .owl-nav .owl-prev {
+    width: 55px;
+    height: 55px;
+    font-size: 0;
+    float: left;
+    margin-left: -50px;
+    background-image: url("../../../media/left.svg");
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    transform: rotate(180deg);
+    display: block;
+    //background-color: $red;
+  }
+  @include mob-c {
+    .owl-carousel .owl-nav .owl-prev {
+      margin-left: -25px;
+    }
+  }
+
+  .owl-carousel .owl-nav .owl-next {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    display: inline-block!important;
+    font-size: 0;
+    float: right;
+    margin-right: -50px;
+    background-image: url("../../../media/left.svg");
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    //background-color: $red;
+  }
+  @include mob-c {
+    .owl-carousel .owl-nav .owl-next {
+      margin-right: -30px;
+    }
+  }
+
+  .campaign_holder {
+    @extend .full-body;
+    float: left;
+    width: 85%;
+    left: 7.5%;
+
+    .head {
+      @extend .full-body;
+      float: left;
+
+      h2 {
+        @extend .font-styles;
+        font-family: 'Merienda',sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 0.9px;
+        line-height: 1.4;
+        text-align: left;
+        color: #000;
+        float: left;
+        text-transform: uppercase;
+      }
+
+      .doubleline {
+        display: inline-block;
+        float: left;
+        position: relative;
+        margin-left: 25px;
+        margin-right: 10px;
+
+        &:before {
+          width: 6px;
+          height: 22px;
+          content: '';
+          border-left: 1px solid #000;
+          border-right: 1px solid #000;
+          position: absolute;
+          left: -7px;
+          top: 6px;
+        }
+      }
+
+      p {
+        @extend .font-styles;
+        font-family: 'lora',sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 5px;
+        letter-spacing: 0.9px;
+        line-height: 1.4;
+        text-align: left;
+        color: #000;
+        float: left;
+        margin-left: 35px;
+      }
+    }
+
+    .content {
+      @extend .full-body;
+      float: left;
+      margin: 30px 0 0;
+      padding: 10px 0;
+
+      .campaign {
+        float: left;
+        width: 90%;
+        margin: 10px 5% 30px;
+        height: 450px;
+        background-color: #fff;
+        border: 1px solid #f5f5f5;
+        overflow: hidden;
+        transition: all 0.25s ease-in-out;
+        //border-radius: 5px;
+        //box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+
+        .img {
+          img {
+            height: 250px;
+          }
+        }
+
+        .inner {
+          @extend .full-body;
+          float: left;
+          width: 90%;
+          left: 5%;
+          padding: 25px 20px 40px;
+
+          h3 {
+            @extend .font-styles;
+            font-family: 'Lora',sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.9px;
+            line-height: 1.4;
+            text-align: left;
+            color: #000;
+          }
+          @include mob-c {
+            h3 {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .social {
+          float: left;
+          //@extend .full-body;
+          display: none;
+          width: 80%;
+          position: absolute;
+          bottom: 50px;
+          left: 30px;
+
+          img {
+            width: 15px;
+            margin-left: 10px;
+            float: left;
+            cursor: pointer;
+          }
+        }
+
+        .right {
+          width: 15%;
+          float: right;
+          position: absolute;
+          bottom: 50px;
+          right: 15px;
+
+          p {
+            @extend .font-styles;
+            font-family: 'Muli',sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.9px;
+            line-height: 1.4;
+            text-align: left;
+            float: left;
+            margin-right: 8px;
+            color: #000;
+          }
+
+          img {
+            width: 15px;
+          }
+        }
+
+        .img {
+          float: left;
+          transition: all 0.25s ease-in-out;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

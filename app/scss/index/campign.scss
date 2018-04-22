@@ -1,0 +1,172 @@
+.campaign_container {
+  @extend .full-body;
+  float: left;
+  background-color: $red;
+  padding: 15px 0 30px;
+
+  .owl-carousel .owl-nav.disabled {
+    display: block !important;
+  }
+
+  .owl-carousel .owl-nav {
+    margin: 10px 0 0;
+    position: absolute;
+    top: 40%;
+    @extend .full-body;
+  }
+  @include mob-c {
+    .owl-carousel .owl-nav {
+      display: none;
+    }
+  }
+
+  .owl-carousel .owl-nav .owl-prev {
+    width: 55px;
+    height: 55px;
+    font-size: 0;
+    float: left;
+    margin-left: -45px;
+    margin-top: -20px;
+    background-image: url("../../../media/new.svg");
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    transform: rotate(180deg);
+    display: block;
+  }
+  @include tab {
+    .owl-carousel .owl-nav .owl-prev {
+      width: 30px;
+      height: 30px;
+      //margin-left: 5px;
+    }
+  }
+
+  .owl-carousel .owl-nav .owl-next {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    display: inline-block!important;
+    font-size: 0;
+    float: right;
+    margin-top: -20px;
+    margin-right: -45px;
+    background-image: url("../../../media/new.svg");
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @include ipadp {
+    .owl-carousel .owl-nav .owl-next {
+      margin-right: -5px;
+    }
+  }
+
+  .campaign_holder {
+    @extend .full-body;
+    float: left;
+    width: 90%;
+    left: 5%;
+
+    .campigncontent {
+      @extend .full-body;
+      float: left;
+      width: 100%;
+
+      .image {
+        @extend .full-body;
+        float: left;
+        width: 15%;
+        text-align: left;
+
+        svg {
+          width: 115px;
+        }
+
+        h1 {
+          @extend .font-styles;
+          font-family: 'Muli',sans-serif;
+          font-size: 25px;
+          padding: 50px 0 0;
+          font-weight: 700;
+          letter-spacing: 0.9px;
+          line-height: 1.4;
+          text-align: left;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+      @include mob-c{
+        .image{
+          width: 100%;
+        }
+      }
+
+      .content {
+        @extend .full-body;
+        float: left;
+        width: 85%;
+
+        .campaign {
+          float: left;
+          width: 90%;
+          margin: 10px 0 0 5%;
+          z-index: 100;
+
+          .inner_content {
+            float: left;
+            @extend .full-body;
+
+            .inner {
+              @extend .full-body;
+              float: left;
+              width: 65%;
+              left: 5%;
+              padding: 20px 0;
+
+              h3 {
+                @extend .font-styles;
+                font-family: 'Muli',sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: 0.9px;
+                line-height: 1.4;
+                text-align: left;
+                color: #fff;
+              }
+              @include mob-c {
+                h1 {
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .img {
+              @extend .full-body;
+              float: left;
+              width: 30%;
+
+              img {
+                width: 100%;
+                margin-top: 20px;
+                height: 70px;
+              }
+              @include ipadp{
+                img{
+                  height: 90px;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include mob-c{
+        .content{
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}

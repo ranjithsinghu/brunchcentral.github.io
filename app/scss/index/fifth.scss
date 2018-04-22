@@ -1,0 +1,252 @@
+.fifth_container {
+	@extend .full-body;
+	float: left;
+	//padding-bottom: 5%;
+	background-color: #f2f2f2;
+
+	.wave {
+		@extend .full-body;
+		float: left;
+		font-size: 0;
+
+		img {
+			width: 101%;
+			height: 100%;
+		}
+	}
+
+	.wave_copy {
+		@extend .full-body;
+		float: left;
+		background-color: $blue;
+
+		.fifth_inner {
+			@extend .full-body;
+			float: left;
+			width: 95%;
+			left: 2.5%;
+			position: relative;
+
+			.contents {
+				@extend .full-body;
+				float: left;
+
+				.left {
+					@extend .full-body;
+					float: left;
+					width: 30%;
+					margin-top: -110px;
+
+					img {
+						width: 300px;
+					}
+					@include ipadp {
+						img {
+							width: 150px;
+						}
+					}
+					@include mob-c {
+						img {
+							width: 150px;
+						}
+					}
+				}
+				@include ipadp {
+					.left {
+						margin-top: 10px;
+					}
+				}
+				@include mob-c {
+					.left {
+						width: 100%;
+						margin-top: 10px;
+					}
+				}
+
+				.right {
+					@extend .full-body;
+					float: left;
+					width: 70%;
+					margin-top: -40px;
+
+					h1 {
+						@extend .font-styles;
+						font-family: 'Muli',sans-serif;
+						font-size: 22px;
+						font-weight: 700;
+						letter-spacing: 0.9px;
+						line-height: 2.1;
+						text-align: left;
+						color: #fff;
+						text-transform: capitalize;
+						margin-bottom: 5px;
+						margin-left: 120px;
+					}
+					@include mob-c {
+						h1 {
+							margin-left: 0;
+							text-align: center;
+						}
+					}
+
+					h2 {
+						@extend .font-styles;
+						font-family: 'lora',sans-serif;
+						font-size: 35px;
+						font-weight: 600;
+						letter-spacing: 0.9px;
+						line-height: 1.4;
+						text-align: left;
+						color: #fff;
+					}
+					@include mob-c {
+						h2 {
+							margin-left: 0;
+							text-align: center;
+						}
+					}
+
+					.mail {
+						float: left;
+						position: relative;
+						width: 80%;
+						padding: 25px 0 15px;
+						margin-left: 120px;
+
+						.mail_wrapper,
+						.zip_wrapper {
+							position: relative;
+
+							.mail {
+								display: inline-block;
+								width: 50%;
+								position: relative;
+							}
+							@include mob-c {
+								.mail {
+									width: 100%;
+									margin: 5px 5px 10px 5px;
+								}
+							}
+
+							.zip {
+								display: inline-block;
+								width: 20%;
+								margin: 0 20px;
+							}
+							@include mob-c {
+								.zip {
+									width: 100%;
+									margin: 5px 5px 10px 5px;
+								}
+							}
+
+							input {
+								text-align: left;
+								padding: 0 0 0 10px;
+								margin: 0;
+								width: 97%;
+								height: 35px;
+								outline: 0;
+								font-size: 15px;
+								font-family: 'muli',sans-serif;
+								letter-spacing: 0.9px;
+								text-decoration: none;
+								border: none;
+								border-bottom: 2px solid #fff;
+								background-color: transparent;
+							}
+							@include mob-c {
+								input {
+									width: 100%;
+								}
+							}
+
+							::placeholder {
+								color: #fff;
+							}
+						}
+						@include mob-c {
+							.mail_wrapper,
+							.zip_wrapper {
+								width: 100%;
+								float: left;
+							}
+						}
+
+						.sign {
+							font-weight: 700;
+							font-family: 'Muli',sans-serif;
+							padding-top: 10px;
+							border: none;
+							cursor: pointer;
+							color: #fff;
+							position: relative;
+							background-color: transparent;
+
+							img {
+								width: 18px;
+								margin-left: 10px;
+								height: 15px;
+								display: inline-block!important;
+								font-size: 0;
+							}
+						}
+
+						.policy_wrapper {
+							text-align: left;
+							display: block;
+							width: 100%;
+							margin: 15px 0 5px;
+							max-width: 700px;
+
+							input {
+								border: none;
+								width: 20px;
+								height: 20px;
+								margin: 2px 5px 20px 0;
+								padding: 0;
+								float: left;
+							}
+
+							label {
+								line-height: 16px;
+								font-size: 12px;
+								width: 90%;
+								letter-spacing: 0.7px;
+								font-family: 'open sans',sans-serif;
+								font-weight: 500;
+								line-height: 1.8;
+								background-color: transparent;
+								color: #fff;
+
+								a {
+									color: #fff;
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+					@include ipadp {
+						.mail {
+							width: 95%;
+							margin-left: 0;
+						}
+					}
+					@include mob-c {
+						.mail {
+							width: 95%;
+							margin-left: 0;
+						}
+					}
+				}
+				@include mob-c {
+					.right {
+						margin: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

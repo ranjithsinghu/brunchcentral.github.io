@@ -1,0 +1,24 @@
+@import "preset";
+@import "mixins";
+@import "header";
+
+
+
+
+
+
+
+#main_wrapper {
+  @extend .full-body;
+  @import "index/hero_new";
+  @import "index/campign";
+  @import "index/third";
+  @import "index/fourth-new";
+  @import "index/fifth";
+  @import "index/sixth-new";
+  @import "index/seventh";
+  @import "index/eight";
+  @import "index/nine";
+  @import "index/ten";
+}
+@import "footer";

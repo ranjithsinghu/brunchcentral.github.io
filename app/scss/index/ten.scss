@@ -1,0 +1,136 @@
+.tenth_container {
+	@extend .full-body;
+	float: left;
+	padding-bottom: 5%;
+	padding-top: 5%;
+
+	.tenth_inner {
+		@extend .full-body;
+		float: left;
+		width: 90%;
+		left: 5%;
+
+		.insta_container {
+			@extend .full-body;
+			float: left;
+
+			.insta_border {
+				@extend .full-body;
+				float: left;
+				width: 85%;
+				left: 5%;
+				border: 3px solid #000;
+				top: 6px;
+				position: relative;
+				text-align: center;
+
+				.insta_header {
+					text-align: center;
+					display: inline-block;
+					background: #fff;
+					position: relative;
+					top: -16px;
+					padding: 0 14px;
+
+					img {
+						width: 30px;
+						height: 30px;
+						float: left;
+					}
+
+					.on {
+						@extend .font-styles;
+						font-family: 'Muli',sans-serif;
+						font-size: 14px;
+						font-weight: 700;
+						letter-spacing: 0.9px;
+						line-height: 1.5;
+						text-align: center;
+						color: #000;
+						float: left;
+						position: relative;
+						top: 6px;
+					}
+
+					.images {
+						float: left;
+						margin-left: 5px;
+
+						img {
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+			}
+
+			.insta_images {
+				@extend .full-body;
+				float: left;
+
+				.insta {
+					@extend .full-body;
+					float: left;
+					width: 25%;
+
+					img {
+						width: 100%;
+						height: 300px;
+					}
+					@include ipadp {
+						img {
+							height: 200px;
+						}
+					}
+					@include mob-c {
+						img {
+							height: 150px;
+						}
+					}
+				}
+				@include mob-c {
+					.insta {
+						width: 50%;
+					}
+				}
+			}
+
+			.button {
+				@extend .full-body;
+				float: left;
+				margin-top: -30px;
+
+				.learn {
+					@extend .font-styles;
+					font-family: 'Muli',sans-serif;
+					font-size: 18px;
+					font-weight: 700;
+					letter-spacing: 0.9px;
+					line-height: 1.4;
+					text-align: left;
+					color: $red;
+					outline: 0;
+					background-color: #fff;
+					padding: 20px 32px;
+					box-shadow: 5px 5px 0 0 rgba(0,0,0,0.15);
+
+					&:hover {
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+	@include ipadp {
+		.tenth_inner {
+			width: 95%;
+			left: 2.5%;
+		}
+	}
+	@include mob-c {
+		.tenth_inner {
+			width: 95%;
+			left: 2.5%;
+		}
+	}
+}

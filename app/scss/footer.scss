@@ -1,0 +1,217 @@
+footer {
+	@extend .full-body;
+	float: left;
+	background-color: #141414;
+
+	.footer_top {
+		@extend .full-body;
+		float: left;
+		margin-top: 5%;
+		background-color: #141414;
+
+		.top_contents {
+			@extend .full-body;
+			float: left;
+			width: 90%;
+			left: 5%;
+
+			.content_list {
+				@extend .full-body;
+				float: left;
+
+				.hide {
+					display: block;
+				}
+				@include ipadp {
+					.hide {
+						display: none;
+					}
+				}
+				@include mob-c {
+					.hide {
+						display: none;
+					}
+				}
+
+				.lists {
+					@extend .full-body;
+					float: left;
+					width: 16.66%;
+					position: relative;
+
+					h1 {
+						@extend .font-styles;
+						font-family: 'Muli',sans-serif;
+						font-size: 12.5px;
+						font-weight: 700;
+						letter-spacing: 0.9px;
+						line-height: 1.4;
+						text-align: left;
+						color: #fff;
+						margin-bottom: 20px;
+					}
+
+					.list {
+						list-style-type: none;
+						padding: 0;
+						float: left;
+
+						li {
+							margin: 0 0 2.5%;
+							padding: 5px 0;
+							position: relative;
+							vertical-align: middle;
+							text-align: left;
+
+							a {
+								width: 100%;
+								font-size: 11.5px;
+								font-family: muli,sans-serif;
+								font-weight: 600;
+								letter-spacing: 0.9px;
+								color: #fff;
+								opacity: 0.6;
+								cursor: pointer;
+								text-align: left;
+								padding: 7px 0;
+								text-decoration: none;
+
+								&:hover {
+									opacity: 1;
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+				@include ipadp {
+					.lists {
+						width: 25%;
+					}
+				}
+				@include mob-c {
+					.lists {
+						width: 50%;
+					}
+				}
+			}
+		}
+
+		.logo {
+			@extend .full-body;
+			float: left;
+			padding: 50px 0;
+
+			.animal {
+				text-align: center;
+
+				img {
+					width: 150px;
+				}
+				@include mob-c {
+					img {
+						width: 85px;
+					}
+				}
+
+				.text {
+					text-align: center;
+
+					img {
+						width: 100px;
+					}
+					@include mob-c {
+						img {
+							width: 70px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer_bottom {
+		@extend .full-body;
+		float: left;
+		background-color: #000;
+
+		.bottom_inner {
+			@extend .full-body;
+			float: left;
+			width: 90%;
+			left: 5%;
+			padding: 50px 0;
+
+			.inner_content {
+				@extend .full-body;
+				float: left;
+
+				.left {
+					@extend .full-body;
+					float: left;
+					width: 50%;
+
+					p {
+						@extend .font-styles;
+						font-family: 'Muli',sans-serif;
+						font-size: 11px;
+						font-weight: 600;
+						letter-spacing: 0.9px;
+						line-height: 1.4;
+						text-align: left;
+						color: #fff;
+						opacity: 0.6;
+
+						a {
+							color: #fff;
+							opacity: 0.6;
+						}
+					}
+				}
+				@include mob-c {
+					.left {
+						width: 90%;
+					}
+				}
+
+				.right {
+					@extend .full-body;
+					float: right;
+					width: 45%;
+					left: 5%;
+
+					a {
+						@extend .font-styles;
+						font-family: 'Muli',sans-serif;
+						font-size: 12px;
+						font-weight: 600;
+						letter-spacing: 0.9px;
+						line-height: 1.4;
+						text-align: left;
+						color: #fff;
+						opacity: 0.6;
+						padding: 0 10px;
+
+						&:hover {
+							color: #fff;
+							opacity: 1;
+						}
+					}
+					@include mob-c {
+						a {
+							float: left;
+							margin-bottom: 9px;
+						}
+					}
+				}
+				@include mob-c {
+					.right {
+						left: 0;
+						width: 100%;
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+	}
+}

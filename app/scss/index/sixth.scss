@@ -1,0 +1,181 @@
+.sixth_container {
+	@extend .full-body;
+	float: left;
+
+	.background {
+		@extend .full-body;
+		float: left;
+		height: 100vh;
+		
+		.head {
+			@extend .full-body;
+			float: left;
+			margin: 5% 5% 10px;
+
+			h2 {
+				@extend .font-styles;
+				font-family: 'Merienda',sans-serif;
+				font-size: 25px;
+				font-weight: bold;
+				letter-spacing: 0.9px;
+				line-height: 1.4;
+				text-align: left;
+				color: #fff;
+				float: left;
+				text-transform: uppercase;
+			}
+			@include mob-c {
+				h2 {
+					font-size: 16px;
+				}
+			}
+
+			.doubleline {
+				display: inline-block;
+				float: left;
+				position: relative;
+				margin-left: 25px;
+				margin-right: 10px;
+
+				&:before {
+					width: 6px;
+					height: 22px;
+					content: '';
+					border-left: 1px solid #fff;
+					border-right: 1px solid #fff;
+					position: absolute;
+					left: -7px;
+					top: 6px;
+				}
+			}
+
+			p {
+				@extend .font-styles;
+				font-family: 'lora',sans-serif;
+				font-size: 18px;
+				font-weight: 700;
+				margin-top: 5px;
+				letter-spacing: 0.9px;
+				line-height: 1.4;
+				text-align: left;
+				color: #fff;
+				float: left;
+				margin-left: 35px;
+			}
+		}
+
+		.list_content {
+			@extend .full-body;
+			float: left;
+			width: 50%;
+			left: 5%;
+			background-color: #fff;
+
+			.lists {
+				@extend .full-body;
+				float: left;
+
+				.left {
+					background-color: #f2f2f2;
+				}
+
+				.left,
+				.right {
+					@extend .full-body;
+					float: left;
+					width: 50%;
+
+					.left_lists {
+						list-style-type: none;
+						float: left;
+						padding: 0;
+
+						li {
+							@extend .font-styles;
+							font-family: 'Muli',sans-serif;
+							font-size: 18px;
+							font-weight: 600;
+							padding: 20px 0;
+							letter-spacing: 0.9px;
+							line-height: 1.4;
+							text-align: left;
+							color: #000;
+							float: left;
+							border-top: 1px solid #ddd;
+
+							a {
+								color: #000;
+								text-decoration: none;
+								padding: 0 30px;
+								float: left;
+
+								&:hover {
+									color: $red;
+								}
+							}
+						}
+
+						.active {
+							background-color: #fff;
+
+							img {
+								width: 15px;
+							}
+						}
+					}
+
+					.right_list {
+						@extend .full-body;
+						float: left;
+						width: 90%;
+						left: 5%;
+						margin-top: 30%;
+
+						h1 {
+							@extend .font-styles;
+							font-family: 'Muli',sans-serif;
+							font-size: 20px;
+							font-weight: 700;
+							margin-top: 5px;
+							letter-spacing: 0.9px;
+							line-height: 1.4;
+							text-align: left;
+							color: #000;
+							float: left;
+						}
+
+						p {
+							@extend .font-styles;
+							font-family: 'Muli',sans-serif;
+							font-size: 14px;
+							font-weight: 400;
+							margin-top: 20px;
+							letter-spacing: 0.9px;
+							line-height: 1.4;
+							text-align: left;
+							color: #000;
+							float: left;
+						}
+
+						a {
+							@extend .font-styles;
+							font-family: 'Muli',sans-serif;
+							font-size: 15px;
+							font-weight: 700;
+							margin-top: 15px;
+							letter-spacing: 0.9px;
+							line-height: 1.4;
+							text-align: left;
+							color: $red;
+							float: left;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

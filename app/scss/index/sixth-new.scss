@@ -1,0 +1,355 @@
+.productslidee {
+	display: none;
+}
+
+.sixth_container {
+	@extend .full-body;
+	float: left;
+
+	.background {
+		@extend .full-body;
+		float: left;
+		height: 100vh;
+
+		.head {
+			@extend .full-body;
+			float: left;
+			margin: 5% 5% 10px;
+			position: absolute;
+			z-index: 500;
+
+			h2 {
+				@extend .font-styles;
+				font-family: 'Merienda',sans-serif;
+				font-size: 25px;
+				font-weight: bold;
+				letter-spacing: 0.9px;
+				line-height: 1.4;
+				text-align: left;
+				color: #fff;
+				float: left;
+				text-transform: uppercase;
+			}
+
+			.doubleline {
+				display: inline-block;
+				float: left;
+				position: relative;
+				margin-left: 25px;
+				margin-right: 10px;
+
+				&:before {
+					width: 6px;
+					height: 22px;
+					content: '';
+					border-left: 1px solid #fff;
+					border-right: 1px solid #fff;
+					position: absolute;
+					left: -7px;
+					top: 6px;
+				}
+			}
+
+			p {
+				@extend .font-styles;
+				font-family: 'lora',sans-serif;
+				font-size: 18px;
+				font-weight: 700;
+				margin-top: 5px;
+				letter-spacing: 0.9px;
+				line-height: 1.4;
+				text-align: left;
+				color: #fff;
+				float: left;
+				margin-left: 35px;
+			}
+			@include mob-c{
+				p{
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+
+		.list_content {
+			@extend .full-body;
+			position: absolute;
+			float: left;
+			width: 45%;
+			left: 5%;
+			top: 150px;
+			z-index: 500;
+			background-color: #fff;
+
+			.lists {
+				@extend .full-body;
+				float: left;
+
+				.left {
+					background-color: #f2f2f2;
+				}
+
+				.left {
+					@extend .full-body;
+					float: left;
+					width: 50%;
+
+					.left_lists {
+						list-style-type: none;
+						float: left;
+						padding: 0;
+						margin: 0;
+
+						.w3-redd {
+							background-color: #fff;
+
+							.arrow,
+							.arrow1,
+							.arrow2,
+							.arrow3,
+							.arrow4,
+							.content {
+								display: block !important;
+							}
+							@include ipadp{
+								.content{
+									display: none !important;
+								}
+							}
+							@include mob-c{
+								.content{
+									display: none !important;
+								}
+							}
+						}
+
+						li {
+							@extend .font-styles;
+							font-family: 'Muli',sans-serif;
+							font-size: 14px;
+							font-weight: 700;
+							padding: 28px 0;
+							letter-spacing: 0.7px;
+							line-height: 1.4;
+							text-align: left;
+							color: #000;
+							float: left;
+							cursor: pointer;
+							border-top: 1px solid #ccc;
+
+							.arrow {
+								position: absolute;
+								top: 30px;
+								right: 25px;
+								display: none;
+							}
+
+							.arrow1 {
+								position: absolute;
+								top: 125px;
+								right: 25px;
+								display: none;
+							}
+
+							.arrow2 {
+								position: absolute;
+								top: 222px;
+								right: 25px;
+								display: none;
+							}
+
+							.arrow3 {
+								position: absolute;
+								top: 317px;
+								right: 25px;
+								display: none;
+							}
+
+							.arrow4 {
+								position: absolute;
+								top: 412px;
+								right: 25px;
+								display: none;
+							}
+
+							.content {
+								float: left;
+								width: 85%;
+								left: 110%;
+								position: absolute;
+								top: 70px;
+								z-index: 800;
+								display: none;
+
+								h1 {
+									@extend .font-styles;
+									font-family: 'lora',sans-serif;
+									font-size: 28px;
+									font-weight: 700;
+									margin-top: 5px;
+									letter-spacing: 0.9px;
+									line-height: 1.2;
+									text-align: left;
+									color: #000;
+									float: left;
+								}
+
+								p {
+									@extend .font-styles;
+									font-family: 'Muli',sans-serif;
+									font-size: 14px;
+									font-weight: 400;
+									margin-top: 20px;
+									letter-spacing: 0.65px;
+									line-height: 1.8;
+									text-align: left;
+									color: #000;
+									float: left;
+								}
+
+								a {
+									@extend .font-styles;
+									font-family: 'Muli',sans-serif;
+									font-size: 15.5px;
+									font-weight: 700;
+									margin-top: 15px;
+									letter-spacing: 0.65px;
+									line-height: 1.4;
+									text-align: left;
+									color: $red;
+									float: left;
+
+									&:hover {
+										text-decoration: underline;
+									}
+								}
+							}
+							@include ipadp{
+								.content{
+									display: none!important;
+								}
+							}
+							@include mob-c{
+								.content{
+									display: none!important;
+								}
+							}
+
+							a {
+								color: #000;
+								text-decoration: none;
+								padding: 0 50px 0 30px;
+								float: left;
+
+								&:hover {
+									color: $red;
+								}
+							}
+						}
+						@include ipadp{
+							li{
+								width: 100%;
+							}
+						}
+						@include mob-c{
+							li{
+								width: 100%;
+							}
+						}
+
+						.active {
+							background-color: #fff;
+
+							img {
+								width: 15px;
+							}
+						}
+					}
+				}
+				@include ipadp{
+					.left{
+						width: 100%;
+						background-color: #fff;
+					}
+				}
+				@include mob-c{
+					.left{
+						width: 100%;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+		@include ipadp{
+			.list_content{
+				position: relative;
+				top: 0;
+				width: 100%;
+				left: 0;
+			}
+		}
+		@include mob-c{
+			.list_content{
+				position: relative;
+				top: 0;
+				width: 100%;
+				left: 0;
+			}
+		}
+
+		.slidee {
+			@extend .full-body;
+			float: left;
+			width: 100vw;
+			height: 100vh;
+
+			.over {
+				position: absolute;
+				//  background: linear-gradient(to top right,#29d986 0%,#41bbd1 100%);
+				background-color: #000;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 100;
+				opacity: 0.1;
+			}
+
+			img {
+				width: 100vw;
+				height: 100vh;
+				//    font-size: 0;
+			}
+			@include ipadp {
+				img {
+					height: 50vh;
+				}
+			}
+			@include mob-c {
+				img {
+					height: 50vh;
+				}
+			}
+		}
+		@include ipadp{
+			.slidee{
+				height: 50vh;
+			}
+		}
+		@include mob-c{
+			.slidee{
+				height: 50vh;
+			}
+		}
+	}
+	@include ipadp{
+		.background{
+			height: auto;
+		}
+	}
+	@include mob-c{
+		.background{
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,465 @@
+.hero_container {
+	@extend .full-body;
+	float: left;
+
+	.hero_inner {
+		@extend .full-body;
+		float: left;
+
+		.owl-carousel .owl-nav.disabled {
+			display: none !important;
+		}
+
+		.owl-carousel .owl-dots {
+			margin: 20px auto 0;
+			height: 20px;
+			position: relative;
+			text-align: center;
+			display: inline-block;
+		}
+		@include tab {
+			.owl-carousel .owl-dots {
+				margin: 100px auto 0;
+			}
+		}
+		@include ipadp {
+			.owl-carousel .owl-dots {
+				margin: 45px auto 0;
+			}
+		}
+		@include mob-c {
+			.owl-carousel .owl-dots {
+				margin: 55px auto 0;
+			}
+		}
+
+		.owl-carousel .owl-dots .owl-dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 100%;
+			background-color: transparent;
+			border: 1.5px solid #fff;
+			float: left;
+			margin: 0 8px;
+		}
+
+		.owl-carousel .owl-dots .active {
+			background-color: #fff !important;
+		}
+
+		.owl-carousel .owl-nav {
+			display: none !important;
+		}
+
+		.hero_folder {
+			@extend .full-body;
+			float: left;
+
+			img {
+				width: 100%;
+			}
+
+			.hero_content {
+				@extend .full-body;
+				float: left;
+				position: absolute;
+				top: 35%;
+				width: 90%;
+				left: 5%;
+				text-align: left;
+
+				a {
+					@extend .font-styles;
+					margin: 0;
+					//padding: 10px 20px;
+					position: relative;
+					cursor: pointer;
+					font-size: 14px;
+					font-family: 'muli',sans-serif;
+					letter-spacing: 0.6px;
+					font-weight: 400;
+					color: #fff;
+					text-align: left;
+				}
+
+				h1 {
+					@extend .font-styles;
+					margin: 10px 0;
+					width: 60%;
+					position: relative;
+					font-size: 55px;
+					font-family: 'muli',sans-serif;
+					letter-spacing: 0.6px;
+					line-height: 1.2;
+					font-weight: 700;
+					color: #fff;
+					text-align: left;
+				}
+
+				p {
+					@extend .font-styles;
+					margin: 0 0 15px;
+					position: relative;
+					font-size: 25px;
+					width: 50%;
+					font-family: 'muli',sans-serif;
+					letter-spacing: 0.6px;
+					font-weight: 700;
+					color: #fff;
+					text-align: left;
+				}
+
+				.more {
+					@extend .font-styles;
+					margin: 0;
+					cursor: pointer;
+					position: relative;
+					font-size: 16px;
+					background-color: #fff;
+					font-family: 'muli',sans-serif;
+					letter-spacing: 0.6px;
+					font-weight: 700;
+					color: $red;
+					padding: 16px 26px;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+.productslide {
+  display: none;
+}
+
+.product_container {
+  @extend .full-body;
+  float: left;
+  z-index: 150;
+
+  .product_content {
+    @extend .full-body;
+    float: left;
+
+    .product_head {
+      //    @extend .full-body;
+      float: left;
+      position: absolute;
+      top: 10%;
+      z-index: 200;
+      //  width: 50%;
+      left: 10%;
+
+      h2 {
+        @extend .font-styles;
+        font-size: 35px;
+        font-family: 'roboto',sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.9px;
+        color: #fff;
+        padding: 0 0 4%;
+        text-align: left;
+        line-height: 1.5;
+      }
+      @include ipadp{
+        h2{
+          font-size: 30px;
+        }
+      }
+      @include mob-c{
+        h2{
+          font-size: 25px;
+        }
+      }
+
+      .name_nav {
+        @extend .full-body;
+        float: left;
+        border-bottom: 1px solid #f5f5f5;
+        padding: 0;
+
+        .w3-red {
+          border-bottom: 2px solid #f5f5f5 !important;
+          opacity: 1 !important;
+          font-weight: 600 !important;
+        }
+
+        .big {
+          display: block;
+        }
+        @include ipadp {
+          .big {
+            display: none;
+          }
+        }
+        @include mob-c{
+          .big{
+            display: none;
+          }
+        }
+
+        .small {
+          display: none;
+        }
+        @include ipadp {
+          .small {
+            display: block;
+          }
+        }
+        @include mob-c {
+          .small {
+            display: block;
+          }
+        }
+
+
+        .button {
+          @extend .font-styles;
+          position: relative;
+          border: none;
+          color: #fff;
+          background-color: transparent;
+          display: inline-block;
+          font-family: 'roboto', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.6px;
+          padding: 0 15px 2.5%;
+          cursor: pointer;
+          text-align: center;
+          overflow: hidden;
+          text-decoration: none;
+          outline: 0;
+          top: 0;
+          float: left;
+          margin: 0;
+          opacity: 0.8;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+        @include ipadp {
+          .button {
+            font-size: 13px;
+          }
+        }
+        @include mob-c {
+          .button {
+            font-size: 11.5px;
+            width: 33.33%;
+            height: 50px;
+          }
+        }
+      }
+    }
+    @include ipadp {
+      .product_head {
+        left: 5%;
+      }
+    }
+    @include mob-c {
+      .product_head {
+        left: 5%;
+        width: 90%;
+      }
+    }
+
+    .slide_nav {
+      @extend .full-body;
+      float: left;
+      position: absolute;
+      top: 40%;
+      left: 3.5%;
+      z-index: 1000;
+      width: 5%;
+      text-align: center;
+
+      .w3-button {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        text-decoration: none;
+        outline: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgba(41,217,134,0.90);
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(41,217,134,.95);
+        }
+      }
+
+      .downn {
+        margin-top: 75px !important;
+      }
+
+      .prevv {
+        transform: rotate(0deg);
+        margin-left: -5px;
+      }
+
+      .nextt {
+        transform: rotate(180deg);
+        margin-left: -5px !important;
+      }
+    }
+    @include ipadp {
+      .slide_nav {
+        display: none;
+      }
+    }
+    @include mob-c {
+      .slide_nav {
+        display: none;
+      }
+    }
+
+    .slide {
+      @extend .full-body;
+      float: left;
+      width: 100vw;
+      height: 90vh;
+
+      .over {
+        position: absolute;
+        //  background: linear-gradient(to top right,#29d986 0%,#41bbd1 100%);
+        background-color: #000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        opacity: 0.75;
+      }
+
+      img {
+        width: 100vw;
+        height: 90vh;
+        //    font-size: 0;
+      }
+      @include ipadp{
+        img{
+          height: 60vh;
+        }
+      }
+      @include mob-c{
+        img{
+          height: 110vh;
+        }
+      }
+
+      .content {
+        //  @extend .full-body;
+        //  width: 60%;
+        float: left;
+        position: absolute;
+        top: 35%;
+        left: 12%;
+        z-index: 200;
+
+        h3 {
+          @extend .font-styles;
+          font-size: 25px;
+          font-family: 'roboto',sans-serif;
+          font-weight: 500;
+          letter-spacing: 0.9px;
+          color: #fff;
+          padding: 0 0 1%;
+          text-align: left;
+          line-height: 1.5;
+        }
+        @include mob-c{
+          h3{
+            font-size: 18px;
+          }
+        }
+
+        p {
+          width: 55%;
+          position: relative;
+          @extend .font-styles;
+          font-size: 13.5px;
+          font-family: 'open sans',sans-serif;
+          font-weight: 500;
+          letter-spacing: 0.8px;
+          line-height: 2.2;
+          color: #fff;
+          padding: 0;
+          text-align: left;
+        }
+        @include tab {
+          p {
+            width: 85%;
+          }
+        }
+        @include mob-c{
+          p{
+            font-size: 12.5px;
+            width: 95%;
+          }
+        }
+
+        .butstart {
+          @extend .font-styles;
+          //width: 50%;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(41,217,134,0.90);
+          border: none;
+          color: #fff;
+          display: inline-block;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.6px;
+          padding: 15px 35px;
+          cursor: pointer;
+          text-align: left;
+          overflow: hidden;
+          text-decoration: none;
+          outline: 0;
+          top: 0;
+          float: left;
+          margin: 4% 0 0;
+          -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: rgba(41,217,134,.95);
+          }
+        }
+        @include mob-c{
+          .butstart{
+            font-size: 13px;
+            padding: 10px 15px;
+          }
+        }
+      }
+      @include ipadp{
+        .content{
+          top: 35%;
+          left: 6%;
+        }
+      }
+      @include mob-c{
+        .content{
+          top: 40%;
+          left: 6%;
+        }
+      }
+    }
+    @include ipadp{
+      .slide{
+        height: 60vh;
+      }
+    }
+    @include mob-c{
+      .slide{
+        height: 120vh;
+      }
+    }
+  }
+}

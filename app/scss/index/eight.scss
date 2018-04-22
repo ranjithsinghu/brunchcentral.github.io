@@ -1,0 +1,200 @@
+.eight_container {
+	@extend .full-body;
+	float: left;
+
+	.background {
+		@extend .full-body;
+		float: left;
+		height: 100vh;
+		background-image: url("../../../media/egg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+
+		.over {
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: absolute;
+			background-color: #000;
+			opacity: 0.35;
+		}
+
+		.head {
+			@extend .full-body;
+			float: left;
+			margin: 5% 5% 10px;
+
+			h2 {
+				@extend .font-styles;
+				font-family: 'Merienda',sans-serif;
+				font-size: 25px;
+				font-weight: bold;
+				letter-spacing: 0.9px;
+				line-height: 1.4;
+				text-align: left;
+				color: #fff;
+				float: left;
+				text-transform: uppercase;
+			}
+
+			.doubleline {
+				display: inline-block;
+				float: left;
+				position: relative;
+				margin-left: 25px;
+				margin-right: 10px;
+
+				&:before {
+					width: 6px;
+					height: 22px;
+					content: '';
+					border-left: 1px solid #fff;
+					border-right: 1px solid #fff;
+					position: absolute;
+					left: -7px;
+					top: 6px;
+				}
+			}
+
+			p {
+				@extend .font-styles;
+				font-family: 'lora',sans-serif;
+				font-size: 18px;
+				font-weight: 700;
+				margin-top: 5px;
+				letter-spacing: 0.9px;
+				line-height: 1.4;
+				text-align: left;
+				color: #fff;
+				float: left;
+				margin-left: 35px;
+			}
+		}
+
+		.contents {
+			position: absolute;
+			height: 100%;
+			width: 50%;
+			right: 0;
+			top: 0;
+			background: rgba(0,0,0,.4);
+			color: #fff;
+
+			.texts {
+				float: left;
+				@extend .full-body;
+				width: 60%;
+				left: 20%;
+				margin-top: 20%;
+
+				h1 {
+					@extend .font-styles;
+					font-family: 'lora',sans-serif;
+					font-size: 70px;
+					width: 90%;
+					font-weight: 600;
+					letter-spacing: 0.9px;
+					line-height: 1;
+					text-align: left;
+					color: #fff;
+				}
+				@include ipadp {
+					h1 {
+						font-size: 30px;
+					}
+				}
+				@include mob-c {
+					h1 {
+						font-size: 20px;
+					}
+				}
+
+				p {
+					@extend .font-styles;
+					font-family: 'Muli',sans-serif;
+					font-size: 15px;
+					width: 90%;
+					font-weight: 400;
+					letter-spacing: 0.9px;
+					line-height: 1.4;
+					text-align: left;
+					margin-top: 10px;
+					color: #fff;
+				}
+
+				.trip {
+					@extend .font-styles;
+					font-family: 'Muli',sans-serif;
+					font-size: 18px;
+					font-weight: 700;
+					letter-spacing: 0.9px;
+					line-height: 1.4;
+					text-align: left;
+					color: $red;
+					background-color: #fff;
+					padding: 14px 28px;
+					float: left;
+					margin-top: 35px;
+					box-shadow: 5px 5px 0 0 rgba(0,0,0,0.15);
+
+					&:hover {
+						background-color: $red;
+						color: #fff;
+						box-shadow: none;
+					}
+				}
+				@include mob-c{
+					.trip{
+						margin-top: 15px;
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
+			@include ipadp {
+				.texts {
+					width: 80%;
+					left: 10%;
+					margin-top: 50px;
+					margin-bottom: 25px;
+				}
+			}
+			@include mob-c {
+				.texts {
+					width: 90%;
+					left: 5%;
+					margin-top: 25px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+		@include ipadp {
+			.contents {
+				width: 100%;
+				bottom: 0;
+				top: auto;
+				height: auto;
+			}
+		}
+		@include mob-c {
+			.contents {
+				width: 100%;
+				bottom: 0;
+				top: auto;
+				height: auto;
+			}
+		}
+	}
+	@include ipadp{
+		.background{
+			height: 65vh;
+		}
+	}
+	@include mob-c{
+		.background{
+			height: 75vh;
+		}
+	}
+}
